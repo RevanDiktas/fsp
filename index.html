@@ -7,111 +7,136 @@
 <meta name="description" content="Fravash is the sourcing and production department for brands that don't have one. Send a design; we get it made. Denim and heavy woven, in seven countries.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-body{margin:0;background:#0A0A0C;color:#FFFFFF;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-a{color:#FFFFFF}a:hover{color:rgba(255,255,255,0.7)}
+body{margin:0;background:#FFFFFF;color:#141416;font-family:'Hanken Grotesk','Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:#141416}a:hover{opacity:.7}
+.mono{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase}
+.disp{font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-0.02em;line-height:0.98;margin:0}
+.outline{color:transparent;-webkit-text-stroke:1.5px #141416;font-weight:400;letter-spacing:-0.03em;line-height:0.9}
+.rule{border-top:1px solid #C9C7C2}
+.mark{position:absolute;left:28px;font-size:14px;line-height:1;color:#141416}
+.pill{display:inline-flex;align-items:center;gap:28px;padding:30px 36px;border:1px solid #141416;border-radius:999px;text-decoration:none;color:#141416;font-size:20px;line-height:1.25;max-width:460px}
+.pill:hover{background:#141416;color:#FFFFFF;opacity:1}
+.cols{position:absolute;inset:0;pointer-events:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.cols span{border-left:1px solid #E1DFDA}
+.cols span:first-child{border-left:0}
+.navl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.85);text-decoration:none;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:18px 24px;border-right:1px solid rgba(255,255,255,0.22)}
+.navl:hover{color:#FFFFFF;opacity:1}
+.status{position:sticky;top:0;z-index:5;background:rgba(80,80,82,0.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#FFFFFF;display:grid;grid-template-columns:minmax(220px,2.2fr) minmax(0,1fr) minmax(0,1.2fr) auto}
+.status>*{padding:22px 32px;border-right:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;gap:14px}
+.status>*:last-child{border-right:0}
+.status .k{opacity:.65}
 @keyframes fv-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-@keyframes fv-turn{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-@keyframes fv-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-.fv-up{animation:fv-up 1s cubic-bezier(.2,.7,.2,1) both}
-.fv-d1{animation-delay:.1s}.fv-d2{animation-delay:.25s}.fv-d3{animation-delay:.4s}.fv-d4{animation-delay:.55s}
-.fv-turn{animation:fv-turn 48s linear infinite;transform-origin:50% 50%}
-.fv-breathe{animation:fv-breathe 9s ease-in-out infinite;transform-origin:50% 50%}
-.fv-num{font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6E6E73}
-.fv-h2{margin:0;font-weight:800;line-height:0.98;letter-spacing:-0.04em;color:#FFFFFF}
-.fv-nav{font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#FFFFFF}
-.fv-nav:hover{color:rgba(255,255,255,0.7)}
-.fv-video{background:#0A0A0C}
-@media (max-width:900px){header>div{grid-template-columns:1fr 1fr !important}}
-@media (prefers-reduced-motion: reduce){.fv-up,.fv-turn,.fv-breathe{animation:none !important}}
-@media (max-width:900px){section>div[style*='grid-template-columns: minmax(220px, 1.2fr) minmax(0, 4fr)']{grid-template-columns:1fr !important}footer>div{grid-template-columns:1fr 1fr !important}}
-@media (max-width:720px){h1{font-size:40px !important}.fv-pad{padding-left:20px !important;padding-right:20px !important}}
+.fv-up{animation:fv-up 1s cubic-bezier(.2,.7,.2,1) both}.fv-d1{animation-delay:.1s}.fv-d2{animation-delay:.25s}.fv-d3{animation-delay:.4s}
+@media (prefers-reduced-motion: reduce){.fv-up{animation:none !important}}
+@media (max-width:900px){.g2{grid-template-columns:1fr !important}.status{grid-template-columns:1fr 1fr !important}.status>*:nth-child(3),.status>*:nth-child(4){display:none}.hdr{grid-template-columns:1fr 1fr !important}.hdr>a:nth-child(n+3){display:none}.big3{grid-template-columns:1fr !important}}
+@media (max-width:720px){.pad{padding-left:20px !important;padding-right:20px !important}h1{font-size:36px !important}}
 </style>
 </head>
 <body>
-<div style="width: 100%; min-height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; background: #0A0A0C; color: #FFFFFF; font-family: 'Manrope', system-ui, sans-serif; font-size: 17px; line-height: 1.5; letter-spacing: -0.01em">
+<div style="width: 100%; min-height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; background: #FFFFFF; color: #141416; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 17px; line-height: 1.5">
 
-  <!-- Hero: video stage -->
-  <section id="top" style="position: relative; box-sizing: border-box; width: 100%; min-height: 100vh; background: #0A0A0C; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
-    <video class="fv-video" autoplay muted loop playsinline poster="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85"><source src="/hero.mp4" type="video/mp4"></video>
-    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,12,0.55) 0%, rgba(10,10,12,0.15) 40%, rgba(10,10,12,0.35) 100%)"></div>
-
-    <header style="position: relative; box-sizing: border-box; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.22)">
-      <div style="display: grid; grid-template-columns: minmax(220px, 1.2fr) repeat(4, minmax(0, 1fr)) auto; align-items: stretch">
-        <a href="#top" style="display: inline-flex; align-items: center; gap: 12px; padding: 26px 32px; font-weight: 700; font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; color: #FFFFFF; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.22)"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 100 100" fill="none"><path d="M92.5 38.61 A44 44 0 1 1 61.39 7.5" stroke="currentColor" stroke-width="9" stroke-linecap="round"></path><circle cx="50" cy="50" r="16" fill="currentColor"></circle></svg>Fravash</a>
-        <a href="#s01" class="fv-nav" style="display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 18px 24px; border-right: 1px solid rgba(255,255,255,0.22); text-decoration: none"><span>01 The problem</span><span>02 Fravash</span></a>
-        <a href="#s03" class="fv-nav" style="display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 18px 24px; border-right: 1px solid rgba(255,255,255,0.22); text-decoration: none"><span>03 How it runs</span><span>04 Denim</span></a>
-        <a href="#s05" class="fv-nav" style="display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 18px 24px; border-right: 1px solid rgba(255,255,255,0.22); text-decoration: none"><span>05 Where this goes</span><span>06 Contact</span></a>
-        <a href="/app" class="fv-nav" style="display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 18px 24px; border-right: 1px solid rgba(255,255,255,0.22); text-decoration: none"><span>Log in</span><span style="opacity: 0.6">Client portal</span></a>
-        <a href="/app" style="display: inline-flex; align-items: center; gap: 10px; padding: 0 32px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #FFFFFF; text-decoration: none; white-space: nowrap">Start a request <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border: 1px solid #FFFFFF; font-size: 14px; line-height: 1">+</span></a>
+  <!-- Hero: film stage -->
+  <section id="top" data-sec="Home" style="position: relative; box-sizing: border-box; width: 100%; min-height: 100vh; background: #141416; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+    <video autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; background: #141416"><source src="/hero.mp4" type="video/mp4"></video>
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,22,0.55) 0%, rgba(20,20,22,0.1) 45%, rgba(20,20,22,0.4) 100%)"></div>
+    <header style="position: relative; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.22)">
+      <div class="hdr" style="display: grid; grid-template-columns: minmax(220px, 2.2fr) repeat(4, minmax(0, 1fr)) auto">
+        <a href="#top" style="display: inline-flex; align-items: center; gap: 14px; padding: 24px 32px; font-size: 17px; line-height: 1.15; color: #FFFFFF; text-decoration: none; border-right: 1px solid rgba(255,255,255,0.22)"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100" fill="none"><path d="M92.5 38.61 A44 44 0 1 1 61.39 7.5" stroke="currentColor" stroke-width="8" stroke-linecap="round"></path><circle cx="50" cy="50" r="16" fill="currentColor"></circle></svg><span>Fravash<br><span style="opacity: .75">Sourcing &amp; production</span></span></a>
+        <a href="#s01" class="navl"><span>01 The problem</span><span>02 The answer</span></a>
+        <a href="#s03" class="navl"><span>03 Denim</span><span>04 How it runs</span></a>
+        <a href="#s05" class="navl"><span>05 Where this goes</span><span>06 Contact</span></a>
+        <a href="/app" class="navl"><span>Log in</span><span style="opacity: .6">Client portal</span></a>
+        <a href="/app" class="mono" style="display: inline-flex; align-items: center; gap: 12px; padding: 0 32px; color: #FFFFFF; text-decoration: none; white-space: nowrap">Start <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border: 1px solid #FFFFFF; font-size: 14px">+</span></a>
       </div>
     </header>
-
-    <div style="position: relative; flex: 1 1 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 64px 32px 24px; box-sizing: border-box; gap: 36px">
-      <h1 class="fv-up fv-d1" style="margin: 0; max-width: 1100px; font-weight: 800; font-size: clamp(40px, 6.2vw, 92px); line-height: 0.96; letter-spacing: -0.04em; text-transform: uppercase; color: #FFFFFF">Fravash<br>Sourcing and production</h1>
-      <p class="fv-up fv-d2" style="margin: 0; max-width: 620px; font-size: 18px; line-height: 1.5; font-weight: 500; color: rgba(255,255,255,0.85)">The sourcing and production department for brands that don't have one. Send a design. We get it made.</p>
-      <div class="fv-up fv-d3" style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 32px; width: 100%; max-width: 900px; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.85)">
-        <div style="display: flex; justify-content: space-between; gap: 24px"><span>Denim</span><span>Heavy woven</span></div>
-        <svg aria-hidden="true" width="56" height="56" viewBox="0 0 100 100" fill="none"><path d="M92.5 38.61 A44 44 0 1 1 61.39 7.5" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"></path><circle cx="50" cy="50" r="15" fill="#FFFFFF"></circle></svg>
-        <div style="display: flex; justify-content: space-between; gap: 24px"><span>Est. 2026 · Amsterdam</span><span>→ Seven countries</span></div>
-      </div>
+    <div style="position: relative; flex: 1 1 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 64px 32px 24px; gap: 32px">
+      <h1 class="fv-up fv-d1 disp" style="max-width: 1100px; font-size: clamp(40px, 6.4vw, 96px); color: #FFFFFF">Fravash<br>Sourcing and production</h1>
+      <p class="fv-up fv-d2" style="margin: 0; max-width: 620px; font-size: 18px; line-height: 1.5; color: rgba(255,255,255,0.85)">The sourcing and production department for brands that don't have one. Send a design. We get it made.</p>
+      <div class="fv-up fv-d3 mono" style="display: flex; flex-wrap: wrap; gap: 12px 40px; justify-content: center; color: rgba(255,255,255,0.8)"><span>Denim · Heavy woven</span><span>Est. 2026 · Amsterdam</span><span>→ Seven countries</span></div>
     </div>
-
-    <div aria-hidden="true" style="position: relative; width: 100%; padding: 0 24px 8px; box-sizing: border-box; overflow: hidden; line-height: 0.8">
-      <span style="display: block; font-weight: 800; font-size: clamp(96px, 19.5vw, 300px); letter-spacing: -0.06em; color: #FFFFFF; mix-blend-mode: overlay; opacity: 0.95; white-space: nowrap">fravash</span>
+    <div aria-hidden="true" style="position: relative; width: 100%; padding: 0 24px 4px; box-sizing: border-box; overflow: hidden; line-height: 0.8">
+      <span style="display: block; font-weight: 500; font-size: clamp(96px, 19.5vw, 300px); letter-spacing: -0.06em; color: #FFFFFF; mix-blend-mode: overlay; opacity: 0.95; white-space: nowrap">fravash</span>
     </div>
   </section>
 
-  <section id="s01" style="box-sizing: border-box; width: 100%; border-top: 1px solid rgba(255,255,255,0.18); ">
-    <div style="display: grid; grid-template-columns: minmax(220px, 1.2fr) minmax(0, 4fr); min-height: 520px">
-      <div class="fv-pad" style="padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.18); display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
-        <span class="fv-num" style="color: rgba(255,255,255,0.72)">01 — The problem</span>
-        <span class="fv-num" style="color: rgba(255,255,255,0.5)">Fravash — Sourcing and production</span>
+  <!-- Sticky status bar -->
+  <div class="status mono" aria-hidden="true">
+    <span style="color: #FFFFFF; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 15px; letter-spacing: 0; text-transform: none"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100" fill="none"><path d="M92.5 38.61 A44 44 0 1 1 61.39 7.5" stroke="currentColor" stroke-width="8" stroke-linecap="round"></path><circle cx="50" cy="50" r="16" fill="currentColor"></circle></svg><span>Fravash</span></span>
+    <span><span class="k">Page:</span><span>Home</span></span>
+    <span><span class="k">Section:</span><span><span id="sec">Home</span></span></span>
+    <a href="/app" style="color: #FFFFFF; text-decoration: none">Start <span style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border: 1px solid #FFFFFF; font-size: 13px">+</span></a>
+  </div>
+
+  <!-- 01 The problem: gradient wash + outlined numerals -->
+  <section id="s01" data-sec="The problem" style="position: relative; box-sizing: border-box; width: 100%; background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 18%, #EFE6D6 70%, #D9C9AE 100%)">
+    <div class="pad" style="padding: 0 64px; box-sizing: border-box">
+      <div class="rule" style="margin-top: 48px"></div>
+      <div class="g2" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 48px; padding: 72px 0 56px; align-items: start">
+        <div style="position: relative; display: flex; align-items: center; justify-content: center; min-height: 340px">
+          <span class="mark" style="left: -36px; top: 0; width: 44px; height: 44px; border: 1px solid #141416; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center"><span style="width: 8px; height: 8px; border-radius: 50%; background: #B8FF3C"></span></span>
+          <div style="position: absolute; width: 340px; height: 340px; border-radius: 50%; border: 1px dashed #141416; opacity: .55"></div>
+          <span class="outline" style="font-family: 'JetBrains Mono', monospace; font-size: clamp(72px, 9vw, 140px)">100s</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 28px">
+          <h2 class="disp" style="font-size: clamp(32px, 4.2vw, 62px); text-transform: none; letter-spacing: -0.03em">Getting one garment made still takes</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px 48px; align-items: baseline"><span class="disp" style="font-size: clamp(20px, 2vw, 28px)">Hundreds of emails</span><span style="font-size: 18px; color: #3A3A3F">dozens of people, and months of waiting.</span></div>
+          <p style="margin: 0; max-width: 640px; font-size: 18px; line-height: 1.55; color: #3A3A3F">A brand with a good design and no sourcing team has two options: hire one, or trust an agent they can't see into. Both are slow. Both lose information between the sketch and the sewing line. Most small orders never get made at all.</p>
+        </div>
       </div>
-      <div class="fv-pad" style="padding: 96px 64px; display: flex; flex-direction: column; gap: 36px; max-width: 1100px">
-        <h2 class="fv-h2" style="font-size: clamp(34px, 4.6vw, 68px); color: #FFFFFF; text-transform: uppercase">Getting a garment made still takes dozens of people, hundreds of emails and months of waiting.</h2>
-        <p style="margin: 0; max-width: 720px; font-size: 19px; line-height: 1.55; color: rgba(255,255,255,0.72)">A brand with a good design and no sourcing team has two options: hire one, or trust an agent they can't see into. Both are slow. Both lose information between the sketch and the sewing line. Most small orders never get made at all.</p>
+      <div class="rule"></div>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; padding: 40px 0 24px">
+        <span class="mono" style="padding: 6px 12px; border: 1px solid #141416">The problem</span>
+        <span class="mono" style="letter-spacing: -0.1em; opacity: .7">////////////////////////</span>
+        <span style="margin-left: auto; font-size: 18px">For small and mid-size brands, the sourcing team is the missing department.</span>
       </div>
+      <div class="big3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 24px 0 0; overflow: hidden">
+        <span class="outline" style="font-size: clamp(56px, 7.4vw, 120px); font-family: 'JetBrains Mono', monospace">DOZENS</span>
+        <span class="outline" style="font-size: clamp(56px, 7.4vw, 120px); font-family: 'JetBrains Mono', monospace">100s</span>
+        <span class="outline" style="font-size: clamp(56px, 7.4vw, 120px); font-family: 'JetBrains Mono', monospace">MONTHS</span>
+      </div>
+      <div class="mono big3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 8px 0 56px; color: #3A3A3F"><span>of people</span><span>of emails</span><span>of waiting</span></div>
     </div>
   </section>
-  <section id="s02" style="box-sizing: border-box; width: 100%; border-top: 1px solid rgba(255,255,255,0.18); ">
-    <div style="display: grid; grid-template-columns: minmax(220px, 1.2fr) minmax(0, 4fr); min-height: 520px">
-      <div class="fv-pad" style="padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.18); display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
-        <span class="fv-num" style="color: rgba(255,255,255,0.72)">02 — Fravash</span>
-        <span class="fv-num" style="color: rgba(255,255,255,0.5)">Fravash — Sourcing and production</span>
-      </div>
-      <div class="fv-pad" style="padding: 96px 64px; display: flex; flex-direction: column; gap: 36px; max-width: 1100px">
-        <h2 class="fv-h2" style="font-size: clamp(34px, 4.6vw, 68px); color: #FFFFFF; text-transform: uppercase">A sourcing and production department you don't have to build.</h2>
-        <p style="margin: 0; max-width: 720px; font-size: 19px; line-height: 1.55; color: rgba(255,255,255,0.72)">You send a design. We source the fabric, cost the piece, develop the sample with you, place the order, check the quality and ship it to your warehouse. Quoting, planning, follow-up and records run on our own software; denim specialists check the decisions that matter.</p>
-        <ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.18)">
-          <li style="min-width: 200px; background: #0A0A0C; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px"><span class="fv-num" style="color: rgba(255,255,255,0.5)">Sourcing</span><span style="font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.72)">Fabric mill, sewing factory and laundry matched to the style. A clear price per piece, broken down.</span></li>
-          <li style="min-width: 200px; background: #0A0A0C; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px"><span class="fv-num" style="color: rgba(255,255,255,0.5)">Development</span><span style="font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.72)">Fit, wash and trims approved on real garments. Tech pack, BOM, style sheet and size spec included.</span></li>
-          <li style="min-width: 200px; background: #0A0A0C; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px"><span class="fv-num" style="color: rgba(255,255,255,0.5)">Production</span><span style="font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.72)">Order placed and followed step by step. Measurements, construction and shade checked before anything ships.</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section id="s03" style="box-sizing: border-box; width: 100%; border-top: 1px solid rgba(255,255,255,0.18); ">
-    <div style="display: grid; grid-template-columns: minmax(220px, 1.2fr) minmax(0, 4fr); min-height: 520px">
-      <div class="fv-pad" style="padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.18); display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
-        <span class="fv-num" style="color: rgba(255,255,255,0.72)">03 — How it runs</span>
-        <span class="fv-num" style="color: rgba(255,255,255,0.5)">Fravash — Sourcing and production</span>
-      </div>
-      <div class="fv-pad" style="padding: 96px 64px; display: flex; flex-direction: column; gap: 36px; max-width: 1100px">
-        <h2 class="fv-h2" style="font-size: clamp(34px, 4.6vw, 68px); color: #FFFFFF; text-transform: uppercase">Software does the coordination. People check what matters.</h2>
-        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid rgba(255,255,255,0.18)"><li style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.18)"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: #FFFFFF">Speed</span><span style="font-size: 17px; color: rgba(255,255,255,0.72)">Quotes and updates in hours, not weeks of email.</span></li><li style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.18)"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: #FFFFFF">Transparency</span><span style="font-size: 17px; color: rgba(255,255,255,0.72)">Every price, date and approval is recorded and visible to you, in one place.</span></li><li style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.18)"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: #FFFFFF">Consistency</span><span style="font-size: 17px; color: rgba(255,255,255,0.72)">Wash and shade results are measured and logged, so the next order matches the last one.</span></li><li style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.18)"><span style="font-weight: 700; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: #FFFFFF">Small orders</span><span style="font-size: 17px; color: rgba(255,255,255,0.72)">Software does the coordination, so a small run gets the same attention as a large one.</span></li></ul>
+
+  <!-- 02 The answer -->
+  <section id="s02" data-sec="The answer" style="position: relative; box-sizing: border-box; width: 100%; background: #FFFFFF">
+    <div class="pad" style="position: relative; padding: 112px 64px 0; box-sizing: border-box">
+      <span class="mark" style="top: 118px">■</span>
+      <p class="disp" style="font-size: clamp(22px, 2.6vw, 36px); margin-bottom: 20px">The answer is</p>
+      <h2 class="disp" style="font-size: clamp(56px, 9.6vw, 150px); letter-spacing: -0.04em">One request,</h2>
+      <div class="rule" style="margin-top: 48px"></div>
+      <div style="position: relative; padding: 88px 0 0">
+        <div class="cols" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <span class="mark" style="top: 80px; left: -36px">+</span>
+        <p style="position: relative; margin: 0; max-width: 1100px; font-size: clamp(24px, 2.9vw, 42px); line-height: 1.25; letter-spacing: -0.02em">a sourcing and production department you don't have to build. You send a design; we source the fabric, cost the piece, develop the sample with you, place the order, check the quality and ship it to your warehouse.</p>
+        <div class="g2" style="position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; align-items: end; padding: 96px 0 0">
+          <a href="/app" class="pill"><span>Find out how a request runs, from sketch to shipment</span><span style="font-size: 28px; line-height: 1">+</span></a>
+          <div style="position: relative; aspect-ratio: 16 / 9; background: #141416; overflow: hidden">
+            <video autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .9"><source src="/hero.mp4" type="video/mp4"></video>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="pad" style="padding: 96px 64px 0; box-sizing: border-box">
+      <ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid #C9C7C2" class="big3">
+        <li style="padding: 32px 32px 40px 0; border-right: 1px solid #E1DFDA; display: flex; flex-direction: column; gap: 12px"><span class="mono" style="color: #6E6E73">Sourcing</span><span style="font-size: 17px; color: #3A3A3F">Fabric mill, sewing factory and laundry matched to the style. A clear price per piece, broken down.</span></li>
+        <li style="padding: 32px 32px 40px; border-right: 1px solid #E1DFDA; display: flex; flex-direction: column; gap: 12px"><span class="mono" style="color: #6E6E73">Development</span><span style="font-size: 17px; color: #3A3A3F">Fit, wash and trims approved on real garments. Tech pack, BOM, style sheet and size spec included.</span></li>
+        <li style="padding: 32px 0 40px 32px; display: flex; flex-direction: column; gap: 12px"><span class="mono" style="color: #6E6E73">Production</span><span style="font-size: 17px; color: #3A3A3F">Order placed and followed step by step. Measurements, construction and shade checked before anything ships.</span></li>
+      </ul>
+    </div>
   </section>
-  <section id="s04" style="position: relative; box-sizing: border-box; width: 100%; min-height: 80vh; border-top: 1px solid rgba(255,255,255,0.18); overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end">
-    <video class="fv-video" autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55"><source src="/hero.mp4" type="video/mp4"></video>
-    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,12,0.2) 0%, rgba(10,10,12,0.85) 100%)"></div>
-    <div style="position: relative; display: grid; grid-template-columns: minmax(220px, 1.2fr) minmax(0, 4fr)">
-      <div class="fv-pad" style="padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.18); display: flex; align-items: flex-end"><span class="fv-num" style="color: rgba(255,255,255,0.72)">04 — Why denim first</span></div>
-      <div class="fv-pad" style="padding: 96px 64px 64px; display: flex; flex-direction: column; gap: 28px; max-width: 1100px">
-        <h2 class="fv-h2" style="font-size: clamp(34px, 4.6vw, 68px); color: #FFFFFF; text-transform: uppercase">We started in denim because it is the hardest thing to get right.</h2>
-        <p style="margin: 0; max-width: 720px; font-size: 19px; line-height: 1.55; color: rgba(255,255,255,0.72)">The fabric shrinks, the wash drifts, the fit lives or dies on half a centimetre. We have stood in the laundries and sat at the sewing lines. Denim and heavy woven, made in seven countries by factories we know by name.</p>
+
+  <!-- 03 Denim: two statements + full-bleed film -->
+  <section id="s03" data-sec="Denim" style="position: relative; box-sizing: border-box; width: 100%; background: #FFFFFF">
+    <div class="pad g2" style="position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px 96px; padding: 128px 64px 64px; box-sizing: border-box">
+      <span class="mark" style="top: 136px">■</span>
+      <h2 class="disp" style="font-size: clamp(28px, 3.4vw, 48px)">This is denim, and the hardest thing in clothing to get right.</h2>
+      <div style="position: relative; display: flex; flex-direction: column; gap: 18px">
+        <span class="mark" style="left: -40px; top: 4px">+</span>
+        <p class="disp" style="font-size: clamp(20px, 2vw, 28px)">This is where we started.</p>
+        <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #3A3A3F">The fabric shrinks, the wash drifts, the fit lives or dies on half a centimetre. We have stood in the laundries and sat at the sewing lines. Denim and heavy woven, made in seven countries by factories we know by name.</p>
         <ul aria-label="Production countries" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
           <li><svg role="img" aria-label="Tunisia" width="34" height="23" viewBox="0 0 48 32" style="border-radius: 3px; display: block"><rect width="48" height="32" fill="#E70013"></rect><circle cx="24" cy="16" r="9" fill="#FFFFFF"></circle><circle cx="24" cy="16" r="6.5" fill="#E70013"></circle><circle cx="25.8" cy="16" r="5.2" fill="#FFFFFF"></circle><polygon points="25.2,11.2 26.4,14.6 30,14.6 27.1,16.7 28.2,20.1 25.2,18 22.2,20.1 23.3,16.7 20.4,14.6 24,14.6" fill="#E70013"></polygon></svg></li>
           <li><svg role="img" aria-label="Egypt" width="34" height="23" viewBox="0 0 48 32" style="border-radius: 3px; display: block"><rect width="48" height="32" fill="#CE1126"></rect><rect y="10.67" width="48" height="10.67" fill="#FFFFFF"></rect><rect y="21.33" width="48" height="10.67" fill="#000000"></rect><rect x="21.5" y="12.5" width="5" height="7" rx="1" fill="#C09300"></rect></svg></li>
@@ -123,40 +148,75 @@ a{color:#FFFFFF}a:hover{color:rgba(255,255,255,0.7)}
         </ul>
       </div>
     </div>
-  </section>
-  <section id="s05" style="box-sizing: border-box; width: 100%; border-top: 1px solid rgba(255,255,255,0.18); ">
-    <div style="display: grid; grid-template-columns: minmax(220px, 1.2fr) minmax(0, 4fr); min-height: 520px">
-      <div class="fv-pad" style="padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.18); display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
-        <span class="fv-num" style="color: rgba(255,255,255,0.72)">05 — Where this goes</span>
-        <span class="fv-num" style="color: rgba(255,255,255,0.5)">Fravash — Sourcing and production</span>
-      </div>
-      <div class="fv-pad" style="padding: 96px 64px; display: flex; flex-direction: column; gap: 36px; max-width: 1100px">
-        <h2 class="fv-h2" style="font-size: clamp(34px, 4.6vw, 68px); color: #FFFFFF; text-transform: uppercase">One request, and it gets made.</h2>
-        <p style="margin: 0; max-width: 720px; font-size: 19px; line-height: 1.55; color: rgba(255,255,255,0.72)">We start by running sourcing and production on software. The long-term goal is autonomous clothing manufacturing, including sewing, dyeing and washing, close to where the clothes are worn. Every order we run today teaches the system how to do the next one.</p>
+    <div class="pad" style="padding: 0 64px; box-sizing: border-box">
+      <div style="position: relative; width: 100%; aspect-ratio: 21 / 9; background: #141416; overflow: hidden">
+        <video autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><source src="/hero.mp4" type="video/mp4"></video>
       </div>
     </div>
+    <div class="pad" style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: baseline; justify-content: space-between; padding: 64px 64px 96px; box-sizing: border-box">
+      <h2 class="disp" style="font-size: clamp(28px, 4vw, 56px)">May the next order match the last</h2>
+      <span style="font-size: 16px; color: #6E6E73">Shade standards, logged</span>
+    </div>
   </section>
-  <section id="s06" style="box-sizing: border-box; width: 100%; border-top: 1px solid rgba(255,255,255,0.18)">
-    <div class="fv-pad" style="padding: 128px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
-      <span class="fv-num" style="color: rgba(255,255,255,0.72)">06 — Contact</span>
-      <h2 class="fv-h2" style="font-size: clamp(44px, 7vw, 112px); color: #FFFFFF; text-transform: uppercase">Send us a design</h2>
-      <p style="margin: 0; max-width: 560px; font-size: 19px; line-height: 1.55; color: rgba(255,255,255,0.72)">A sketch, a tech pack or a reference garment. Factory options and a price within two working days.</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; margin-top: 8px">
-        <a href="/app" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 28px; background: #FFFFFF; color: #0A0A0C; text-decoration: none; border-radius: 999px; font-weight: 600; font-size: 16px">Start a request</a>
-        <a href="mailto:hello@fravash.ai" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 22px; color: #FFFFFF; text-decoration: none; border-radius: 999px; font-weight: 600; font-size: 16px; border: 1px solid rgba(255,255,255,0.4)">hello@fravash.ai</a>
+
+  <!-- 04 How it runs -->
+  <section id="s04" data-sec="How it runs" style="position: relative; box-sizing: border-box; width: 100%; background: #F6F4EF">
+    <div class="pad g2" style="position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px 96px; padding: 112px 64px; box-sizing: border-box">
+      <span class="mark" style="top: 120px">■</span>
+      <h2 class="disp" style="font-size: clamp(28px, 3.4vw, 48px)">Software does the coordination. People check what matters.</h2>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid #C9C7C2">
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid #C9C7C2"><span class="mono">Speed</span><span style="font-size: 17px; color: #3A3A3F">Quotes and updates in hours, not weeks of email.</span></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid #C9C7C2"><span class="mono">Transparency</span><span style="font-size: 17px; color: #3A3A3F">Every price, date and approval recorded and visible to you, in one place.</span></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid #C9C7C2"><span class="mono">Consistency</span><span style="font-size: 17px; color: #3A3A3F">Wash and shade results measured and logged, so the next order matches the last one.</span></li>
+        <li style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid #C9C7C2"><span class="mono">Small orders</span><span style="font-size: 17px; color: #3A3A3F">Software does the coordination, so a small run gets the same attention as a large one.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 05 Where this goes -->
+  <section id="s05" data-sec="Where this goes" style="position: relative; box-sizing: border-box; width: 100%; background: #FFFFFF">
+    <div class="pad" style="position: relative; padding: 128px 64px 0; box-sizing: border-box">
+      <span class="mark" style="top: 136px">■</span>
+      <p class="disp" style="font-size: clamp(22px, 2.6vw, 36px); margin-bottom: 20px">Where this goes</p>
+      <h2 class="outline" style="margin: 0; font-size: clamp(48px, 9vw, 140px); text-transform: uppercase">Made, not managed.</h2>
+      <div class="rule" style="margin-top: 48px"></div>
+      <div class="g2" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; padding: 72px 0 112px">
+        <span class="mono" style="color: #6E6E73">05 — Vision</span>
+        <p style="margin: 0; max-width: 760px; font-size: clamp(20px, 2.2vw, 30px); line-height: 1.35; letter-spacing: -0.015em">We start by running sourcing and production on software. The long-term goal is autonomous clothing manufacturing, including sewing, dyeing and washing, close to where the clothes are worn. Every order we run today teaches the system how to do the next one.</p>
       </div>
     </div>
   </section>
 
-  <footer style="box-sizing: border-box; width: 100%; border-top: 1px solid rgba(255,255,255,0.18)">
-    <div style="display: grid; grid-template-columns: minmax(220px, 1.2fr) repeat(3, minmax(0, 1fr)); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.72)">
-      <span style="padding: 26px 32px; border-right: 1px solid rgba(255,255,255,0.18); color: #FFFFFF">Fravash</span>
-      <span style="padding: 26px 24px; border-right: 1px solid rgba(255,255,255,0.18)">Amsterdam</span>
-      <a href="mailto:hello@fravash.ai" style="padding: 26px 24px; border-right: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.72); text-decoration: none">hello@fravash.ai</a>
-      <a href="/app" style="padding: 26px 24px; color: rgba(255,255,255,0.72); text-decoration: none">Client portal</a>
+  <!-- 06 Contact -->
+  <section id="s06" data-sec="Contact" style="position: relative; box-sizing: border-box; width: 100%; background: linear-gradient(180deg, #FFFFFF 0%, #EFE6D6 100%); border-top: 1px solid #C9C7C2">
+    <div class="pad g2" style="display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; align-items: end; padding: 112px 64px 96px; box-sizing: border-box">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <span class="mono" style="color: #6E6E73">06 — Contact</span>
+        <h2 class="disp" style="font-size: clamp(44px, 8vw, 128px)">Send us a design</h2>
+        <p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.5; color: #3A3A3F">A sketch, a tech pack or a reference garment. Factory options and a price within two working days.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start">
+        <a href="/app" class="pill"><span>Start a request</span><span style="font-size: 28px; line-height: 1">+</span></a>
+        <a href="mailto:hello@fravash.ai" class="mono" style="padding: 14px 0; text-decoration: none">hello@fravash.ai</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="box-sizing: border-box; width: 100%; border-top: 1px solid #141416; background: #FFFFFF">
+    <div class="mono status" style="position: static; background: #FFFFFF; color: #141416; backdrop-filter: none; grid-template-columns: minmax(220px, 2.2fr) repeat(3, minmax(0, 1fr))">
+      <span style="color: #141416; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 15px; letter-spacing: 0; text-transform: none; border-right: 1px solid #C9C7C2"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100" fill="none"><path d="M92.5 38.61 A44 44 0 1 1 61.39 7.5" stroke="currentColor" stroke-width="8" stroke-linecap="round"></path><circle cx="50" cy="50" r="16" fill="currentColor"></circle></svg><span>Fravash</span></span>
+      <span style="border-right: 1px solid #C9C7C2">Amsterdam</span>
+      <a href="mailto:hello@fravash.ai" style="border-right: 1px solid #C9C7C2; text-decoration: none; color: #141416">hello@fravash.ai</a>
+      <a href="/app" style="text-decoration: none; color: #141416">Client portal</a>
     </div>
   </footer>
-
 </div>
+<script>
+(function(){
+  var out=document.getElementById('sec'); if(!out||!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){out.textContent=e.target.getAttribute('data-sec');}});},{rootMargin:'-40% 0px -55% 0px'});
+  document.querySelectorAll('section[data-sec]').forEach(function(s){io.observe(s);});
+})();
+</script>
 </body>
 </html>
