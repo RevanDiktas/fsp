@@ -23,8 +23,8 @@ a{color:#141416}a:hover{opacity:.7}
 .cols span:first-child{border-left:0}
 .navl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.85);text-decoration:none;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:18px 24px;border-right:1px solid rgba(255,255,255,0.22)}
 .navl:hover{color:#FFFFFF;opacity:1}
-.status{position:sticky;top:0;z-index:5;background:rgba(80,80,82,0.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#FFFFFF;display:grid;grid-template-columns:minmax(220px,2.2fr) minmax(0,1fr) minmax(0,1.2fr) auto}
-.status>*{padding:22px 32px;border-right:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;gap:14px}
+.status{position:sticky;top:0;z-index:5;background:rgba(255,255,255,0.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#141416;border-bottom:1px solid #C9C7C2;display:grid;grid-template-columns:minmax(220px,2.2fr) minmax(0,1fr) minmax(0,1.2fr) auto}
+.status>*{padding:20px 32px;border-right:1px solid #C9C7C2;display:flex;align-items:center;gap:14px}
 .status>*:last-child{border-right:0}
 .status .k{opacity:.65}
 @keyframes fv-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
@@ -54,62 +54,37 @@ a{color:#141416}a:hover{opacity:.7}
     <div style="position: relative; flex: 1 1 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 64px 32px 24px; gap: 32px">
       <h1 class="fv-up fv-d1 disp" style="max-width: 1100px; font-size: clamp(40px, 6.4vw, 96px); color: #FFFFFF">Fravash<br>Sourcing and production</h1>
       <p class="fv-up fv-d2" style="margin: 0; max-width: 620px; font-size: 18px; line-height: 1.5; color: rgba(255,255,255,0.85)">The sourcing and production department for brands that don't have one. Send a design. We get it made.</p>
-      <div class="fv-up fv-d3 mono" style="display: flex; flex-wrap: wrap; gap: 12px 40px; justify-content: center; color: rgba(255,255,255,0.8)"><span>Denim · Heavy woven</span><span>Est. 2026 · Amsterdam</span><span>→ Seven countries</span></div>
-    </div>
-    <div aria-hidden="true" style="position: relative; width: 100%; padding: 0 24px 4px; box-sizing: border-box; overflow: hidden; line-height: 0.8">
-      <span style="display: block; font-weight: 500; font-size: clamp(96px, 19.5vw, 300px); letter-spacing: -0.06em; color: #FFFFFF; mix-blend-mode: overlay; opacity: 0.95; white-space: nowrap">fravash</span>
     </div>
   </section>
 
   <!-- Sticky status bar -->
   <div class="status mono" aria-hidden="true">
-    <span style="color: #FFFFFF; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 15px; letter-spacing: 0; text-transform: none"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100" fill="none"><path d="M92.5 38.61 A44 44 0 1 1 61.39 7.5" stroke="currentColor" stroke-width="8" stroke-linecap="round"></path><circle cx="50" cy="50" r="16" fill="currentColor"></circle></svg><span>Fravash</span></span>
+    <span style="color: #141416; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 15px; letter-spacing: 0; text-transform: none"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 100 100" fill="none"><path d="M92.5 38.61 A44 44 0 1 1 61.39 7.5" stroke="currentColor" stroke-width="8" stroke-linecap="round"></path><circle cx="50" cy="50" r="16" fill="currentColor"></circle></svg><span>Fravash</span></span>
     <span><span class="k">Page:</span><span>Home</span></span>
     <span><span class="k">Section:</span><span><span id="sec">Home</span></span></span>
-    <a href="/app" style="color: #FFFFFF; text-decoration: none">Start <span style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border: 1px solid #FFFFFF; font-size: 13px">+</span></a>
+    <a href="/app" style="color: #141416; text-decoration: none">Start <span style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border: 1px solid #141416; font-size: 13px">+</span></a>
   </div>
 
-  <!-- 01 The problem: gradient wash + outlined numerals -->
-  <section id="s01" data-sec="The problem" style="position: relative; box-sizing: border-box; width: 100%; background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 18%, #EFE6D6 70%, #D9C9AE 100%)">
-    <div class="pad" style="padding: 0 64px; box-sizing: border-box">
-      <div class="rule" style="margin-top: 48px"></div>
-      <div class="g2" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 48px; padding: 72px 0 56px; align-items: start">
-        <div style="position: relative; display: flex; align-items: center; justify-content: center; min-height: 340px">
-          <span class="mark" style="left: -36px; top: 0; width: 44px; height: 44px; border: 1px solid #141416; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center"><span style="width: 8px; height: 8px; border-radius: 50%; background: #B8FF3C"></span></span>
-          <div style="position: absolute; width: 340px; height: 340px; border-radius: 50%; border: 1px dashed #141416; opacity: .55"></div>
-          <span class="outline" style="font-family: 'JetBrains Mono', monospace; font-size: clamp(72px, 9vw, 140px)">100s</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 28px">
-          <h2 class="disp" style="font-size: clamp(32px, 4.2vw, 62px); text-transform: none; letter-spacing: -0.03em">Getting one garment made still takes</h2>
-          <div style="display: flex; flex-wrap: wrap; gap: 12px 48px; align-items: baseline"><span class="disp" style="font-size: clamp(20px, 2vw, 28px)">Hundreds of emails</span><span style="font-size: 18px; color: #3A3A3F">dozens of people, and months of waiting.</span></div>
+  <!-- 01 The problem -->
+  <section id="s01" data-sec="The problem" style="position: relative; box-sizing: border-box; width: 100%; background: #FFFFFF">
+    <div class="pad" style="padding: 128px 64px 112px; box-sizing: border-box">
+      <div class="g2" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; align-items: start">
+        <span class="mono" style="color: #6E6E73">01 — The problem</span>
+        <div style="display: flex; flex-direction: column; gap: 32px">
+          <h2 class="disp" style="font-size: clamp(32px, 4.4vw, 64px)">Getting one garment made still takes dozens of people, hundreds of emails and months of waiting.</h2>
           <p style="margin: 0; max-width: 640px; font-size: 18px; line-height: 1.55; color: #3A3A3F">A brand with a good design and no sourcing team has two options: hire one, or trust an agent they can't see into. Both are slow. Both lose information between the sketch and the sewing line. Most small orders never get made at all.</p>
         </div>
       </div>
-      <div class="rule"></div>
-      <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; padding: 40px 0 24px">
-        <span class="mono" style="padding: 6px 12px; border: 1px solid #141416">The problem</span>
-        <span class="mono" style="letter-spacing: -0.1em; opacity: .7">////////////////////////</span>
-        <span style="margin-left: auto; font-size: 18px">For small and mid-size brands, the sourcing team is the missing department.</span>
-      </div>
-      <div class="big3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 24px 0 0; overflow: hidden">
-        <span class="outline" style="font-size: clamp(56px, 7.4vw, 120px); font-family: 'JetBrains Mono', monospace">DOZENS</span>
-        <span class="outline" style="font-size: clamp(56px, 7.4vw, 120px); font-family: 'JetBrains Mono', monospace">100s</span>
-        <span class="outline" style="font-size: clamp(56px, 7.4vw, 120px); font-family: 'JetBrains Mono', monospace">MONTHS</span>
-      </div>
-      <div class="mono big3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 8px 0 56px; color: #3A3A3F"><span>of people</span><span>of emails</span><span>of waiting</span></div>
     </div>
   </section>
 
   <!-- 02 The answer -->
   <section id="s02" data-sec="The answer" style="position: relative; box-sizing: border-box; width: 100%; background: #FFFFFF">
     <div class="pad" style="position: relative; padding: 112px 64px 0; box-sizing: border-box">
-      <span class="mark" style="top: 118px">■</span>
       <p class="disp" style="font-size: clamp(22px, 2.6vw, 36px); margin-bottom: 20px">The answer is</p>
       <h2 class="disp" style="font-size: clamp(56px, 9.6vw, 150px); letter-spacing: -0.04em">One request,</h2>
       <div class="rule" style="margin-top: 48px"></div>
       <div style="position: relative; padding: 88px 0 0">
-        <div class="cols" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-        <span class="mark" style="top: 80px; left: -36px">+</span>
         <p style="position: relative; margin: 0; max-width: 1100px; font-size: clamp(24px, 2.9vw, 42px); line-height: 1.25; letter-spacing: -0.02em">a sourcing and production department you don't have to build. You send a design; we source the fabric, cost the piece, develop the sample with you, place the order, check the quality and ship it to your warehouse.</p>
         <div class="g2" style="position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; align-items: end; padding: 96px 0 0">
           <a href="/app" class="pill"><span>Find out how a request runs, from sketch to shipment</span><span style="font-size: 28px; line-height: 1">+</span></a>
@@ -131,10 +106,8 @@ a{color:#141416}a:hover{opacity:.7}
   <!-- 03 Denim: two statements + full-bleed film -->
   <section id="s03" data-sec="Denim" style="position: relative; box-sizing: border-box; width: 100%; background: #FFFFFF">
     <div class="pad g2" style="position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px 96px; padding: 128px 64px 64px; box-sizing: border-box">
-      <span class="mark" style="top: 136px">■</span>
       <h2 class="disp" style="font-size: clamp(28px, 3.4vw, 48px)">This is denim, and the hardest thing in clothing to get right.</h2>
       <div style="position: relative; display: flex; flex-direction: column; gap: 18px">
-        <span class="mark" style="left: -40px; top: 4px">+</span>
         <p class="disp" style="font-size: clamp(20px, 2vw, 28px)">This is where we started.</p>
         <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #3A3A3F">The fabric shrinks, the wash drifts, the fit lives or dies on half a centimetre. We have stood in the laundries and sat at the sewing lines. Denim and heavy woven, made in seven countries by factories we know by name.</p>
         <ul aria-label="Production countries" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
@@ -153,16 +126,12 @@ a{color:#141416}a:hover{opacity:.7}
         <video autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><source src="/hero.mp4" type="video/mp4"></video>
       </div>
     </div>
-    <div class="pad" style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: baseline; justify-content: space-between; padding: 64px 64px 96px; box-sizing: border-box">
-      <h2 class="disp" style="font-size: clamp(28px, 4vw, 56px)">May the next order match the last</h2>
-      <span style="font-size: 16px; color: #6E6E73">Shade standards, logged</span>
-    </div>
+    <div style="height: 96px"></div>
   </section>
 
   <!-- 04 How it runs -->
-  <section id="s04" data-sec="How it runs" style="position: relative; box-sizing: border-box; width: 100%; background: #F6F4EF">
+  <section id="s04" data-sec="How it runs" style="position: relative; box-sizing: border-box; width: 100%; background: #FFFFFF; border-top: 1px solid #C9C7C2">
     <div class="pad g2" style="position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px 96px; padding: 112px 64px; box-sizing: border-box">
-      <span class="mark" style="top: 120px">■</span>
       <h2 class="disp" style="font-size: clamp(28px, 3.4vw, 48px)">Software does the coordination. People check what matters.</h2>
       <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid #C9C7C2">
         <li style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid #C9C7C2"><span class="mono">Speed</span><span style="font-size: 17px; color: #3A3A3F">Quotes and updates in hours, not weeks of email.</span></li>
@@ -176,9 +145,7 @@ a{color:#141416}a:hover{opacity:.7}
   <!-- 05 Where this goes -->
   <section id="s05" data-sec="Where this goes" style="position: relative; box-sizing: border-box; width: 100%; background: #FFFFFF">
     <div class="pad" style="position: relative; padding: 128px 64px 0; box-sizing: border-box">
-      <span class="mark" style="top: 136px">■</span>
-      <p class="disp" style="font-size: clamp(22px, 2.6vw, 36px); margin-bottom: 20px">Where this goes</p>
-      <h2 class="outline" style="margin: 0; font-size: clamp(48px, 9vw, 140px); text-transform: uppercase">Made, not managed.</h2>
+      <h2 class="disp" style="font-size: clamp(48px, 8vw, 120px); letter-spacing: -0.04em">Made, not managed.</h2>
       <div class="rule" style="margin-top: 48px"></div>
       <div class="g2" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; padding: 72px 0 112px">
         <span class="mono" style="color: #6E6E73">05 — Vision</span>
@@ -188,7 +155,7 @@ a{color:#141416}a:hover{opacity:.7}
   </section>
 
   <!-- 06 Contact -->
-  <section id="s06" data-sec="Contact" style="position: relative; box-sizing: border-box; width: 100%; background: linear-gradient(180deg, #FFFFFF 0%, #EFE6D6 100%); border-top: 1px solid #C9C7C2">
+  <section id="s06" data-sec="Contact" style="position: relative; box-sizing: border-box; width: 100%; background: #FFFFFF; border-top: 1px solid #C9C7C2">
     <div class="pad g2" style="display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; align-items: end; padding: 112px 64px 96px; box-sizing: border-box">
       <div style="display: flex; flex-direction: column; gap: 24px">
         <span class="mono" style="color: #6E6E73">06 — Contact</span>
