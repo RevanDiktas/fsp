@@ -118,7 +118,7 @@ footer .status>*:first-child{font-size:14px !important}
 
   <!-- Hero: film stage -->
   <section id="top" data-sec="Home" style="position: relative; box-sizing: border-box; width: 100%; min-height: 100vh; background: #141416; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
-    <video autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #FFFFFF" poster="/hero.jpg"><source src="/hero.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #FFFFFF" poster="/hero.jpg"><source data-hq="/hero.mp4" data-m="/hero-m.mp4" src="/hero-m.mp4" type="video/mp4"></video>
     <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0.55) 100%)"></div>
     <header style="position: relative; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.22)">
       <div class="hdr" style="display: grid; grid-template-columns: minmax(220px, 2.2fr) repeat(4, minmax(0, 1fr)) auto">
@@ -168,7 +168,7 @@ footer .status>*:first-child{font-size:14px !important}
         <div class="g2" style="position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; align-items: end; padding: 96px 0 0">
           <a href="/app" class="pill"><span>Find out how a request runs, from sketch to shipment</span><span style="font-size: 28px; line-height: 1">+</span></a>
           <div style="position: relative; aspect-ratio: 16 / 9; background: #FFFFFF; overflow: hidden">
-            <video autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" poster="/request.jpg"><source src="/request.mp4" type="video/mp4"></video>
+            <video autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" poster="/request.jpg"><source data-hq="/request.mp4" data-m="/request-m.mp4" src="/request-m.mp4" type="video/mp4"></video>
           </div>
         </div>
       </div>
@@ -202,7 +202,7 @@ footer .status>*:first-child{font-size:14px !important}
     </div>
     <div class="pad" style="padding: 0 64px; box-sizing: border-box">
       <div style="position: relative; width: 100%; aspect-ratio: 21 / 9; background: #FFFFFF; overflow: hidden">
-        <video autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" poster="/denim.jpg"><source src="/denim.mp4" type="video/mp4"></video>
+        <video autoplay muted loop playsinline aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover" poster="/denim.jpg"><source data-hq="/denim.mp4" data-m="/denim-m.mp4" src="/denim-m.mp4" type="video/mp4"></video>
       </div>
     </div>
     <div style="height: 96px"></div>
@@ -262,6 +262,15 @@ footer .status>*:first-child{font-size:14px !important}
   var out=document.getElementById('sec'); if(!out||!('IntersectionObserver' in window)) return;
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){out.textContent=e.target.getAttribute('data-sec');}});},{rootMargin:'-40% 0px -55% 0px'});
   document.querySelectorAll('section[data-sec]').forEach(function(s){io.observe(s);});
+})();
+</script>
+<script>
+(function(){
+  var hq=window.innerWidth>900 && !(navigator.connection&&navigator.connection.saveData);
+  document.querySelectorAll('video source[data-hq]').forEach(function(src){
+    var want=hq?src.getAttribute('data-hq'):src.getAttribute('data-m');
+    if(src.getAttribute('src')!==want){src.setAttribute('src',want);src.parentNode.load();src.parentNode.play().catch(function(){});}
+  });
 })();
 </script>
 </body>
